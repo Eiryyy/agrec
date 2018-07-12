@@ -28,3 +28,7 @@
 [prune]
   go-tests = true
   unused-packages = true
+
+[[constraint]]
+  name = "github.com/dropbox/dropbox-sdk-go-unofficial"
+  version = "4.1.0"

@@ -1,0 +1,4 @@
+[[programs]]
+title = "atliving"
+cron = "0 30 21 * * Mon"
+minute = 30

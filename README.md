@@ -18,5 +18,5 @@ docker run -e "DROPBOX_TOKEN=yourtoken" -v /path/to/your/programs.toml:/root/pro
 [[programs]]
 title = "favorite_program"
 cron = "0 30 21 * * Mon" # CRON式
-min = 30 # 番組の時間
+min = 30 # 番組の時間
 ```

@@ -15,9 +15,9 @@ type config struct {
 }
 
 type program struct {
-	Title  string
-	Cron   string
-	Minute int
+	Title string
+	Cron  string
+	Min   int
 }
 
 func main() {
@@ -30,9 +30,9 @@ func main() {
 	cron := cron.NewWithLocation(location)
 	for _, p := range c.Programs {
 		title := p.Title
-		minute := p.Minute
+		min := p.Min
 		job := func() {
-			record.Do(title, minute)
+			record.Do(title, min)
 		}
 		cron.AddFunc(p.Cron, job)
 		fmt.Println("Recording " + p.Title + " is scheduled")

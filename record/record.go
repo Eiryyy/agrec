@@ -13,9 +13,9 @@ import (
 const streamURL = "rtmp://fms-base1.mitene.ad.jp/agqr/aandg22"
 
 // Do function
-func Do(title string, minute int) error {
+func Do(title string, min int) error {
 	fmt.Println("Record start:", title)
-	err := exec.Command("rtmpdump", "-r", streamURL, "-v", "-q", "-B", fmt.Sprint(minute*60), "-o", title+".flv").Run()
+	err := exec.Command("rtmpdump", "-r", streamURL, "-v", "-q", "-B", fmt.Sprint(min*60), "-o", title+".flv").Run()
 	if err != nil {
 		fmt.Println("rtmpdump:", err)
 		return err
